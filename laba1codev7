@@ -13,7 +13,7 @@ struct Right_M {
     double P;
 };
 
-// Объявление функций
+
 Right_M* AddStruct(Right_M* Obj, const int amount);
 void setData(Right_M* Obj, const int amount);
 void showData(const Right_M* Obj, const int amount);
