@@ -1,0 +1,105 @@
+#include <iostream>
+#include <string>
+#include <locale>
+
+using namespace std;
+
+class vehicles
+{
+public:
+    string nameVeh;
+    int wheels;
+    double tank;
+    double powerEn;
+    double t;
+    int mileage;
+};
+
+// Объявление функций
+void print_menu();
+int Get_Variant();
+
+int main()
+{
+    setlocale(LC_ALL, "ru");
+
+    while (true) {
+        system("cls");
+        print_menu();
+        h = Get_Variant();
+        switch (h)
+        {
+        case 1:
+            
+            //
+            
+            break;
+        case 2:
+            
+            //
+            
+            break;
+        case 3:
+           
+            //
+            
+            break;
+        case 4:
+            
+            //
+            
+            break;
+        case 5:
+        
+            //
+            
+            break;
+        case 6:
+            cout << "Вы точно хотите выйти? Для подтверждения нажмите 1 " << endl;
+            cin >> YeaOrNot;
+            if (YeaOrNot == 1) {
+                break;
+            }
+            break;
+        default:
+            cout << "нет такого " << endl;
+            break;
+        }
+        if (YeaOrNot == 1) {
+            break;
+        }
+        system("pause");
+    }
+    
+    return 0;
+}
+
+int Get_Variant() {
+    int number;
+    string userInput;
+    while (true) {
+        getline(cin, userInput);
+        stringstream ss(userInput);
+
+        if (ss >> number) {
+            break;
+        }
+        else {
+            cout << "Ошибка! Пожалуйста, введите число." << endl;
+        }
+    }
+    return number;
+}
+
+void print_menu()
+{
+    system("cls"); // очищает экран
+    cout << "Какое действие хотите совершить?" << endl;
+    cout << "1. Внести данные о транспортном средстве" << endl;
+    cout << "2. Посмотреть данные о транспортных средствах" << endl;
+    cout << "3. Ввести протяженность трассы" << endl;
+    cout << "4. Произвести расчет прохождения трассы" << endl;
+    cout << "5. Вывод результатов прохождения трассы" << endl; // должно появляться после расчетов
+    cout << "6. Выход" << endl;
+    cout << "> ";
+}
